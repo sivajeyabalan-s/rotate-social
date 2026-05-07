@@ -1,4 +1,4 @@
-import gsap from 'gsap';
+﻿import gsap from 'gsap';
 import { SplitText} from 'gsap/all'
 import { useGSAP } from '@gsap/react'
 
@@ -29,16 +29,16 @@ const About = () => {
 	 <div className="mb-16 md:px-0 px-5">
 		<div className="content">
 		 <div className="md:col-span-8">
-			<p className="badge">Best Cocktails</p>
+			<p className="badge">The Monks</p>
 			<h2>
 			 Where every detail matters <span className="text-white">-</span>
-				from muddle to garnish
+				from concept to completion
 			</h2>
 		 </div>
 		 
 		 <div className="sub-content">
 			<p>
-			 Every cocktail we serve is a reflection of our obsession with detail — from the first muddle to the final garnish. That care is what turns a simple drink into something truly memorable.
+			 Every service we deliver is a reflection of our obsession with detail — from the first consultation to the final execution. That care is what turns a simple task into something truly extraordinary.
 			</p>
 			
 			<div>

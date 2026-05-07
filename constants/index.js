@@ -1,15 +1,11 @@
-const navLinks = [
+﻿const navLinks = [
  {
-	id: "cocktails",
-	title: "Cocktails",
+	id: "home",
+	title: "Home",
  },
  {
 	id: "about",
 	title: "About Us",
- },
- {
-	id: "work",
-	title: "The Art",
  },
  {
 	id: "contact",
@@ -87,17 +83,17 @@ const profileLists = [
 ];
 
 const featureLists = [
- "Perfectly balanced blends",
- "Garnished to perfection",
- "Ice-cold every time",
- "Expertly shaken & stirred",
+ "Rooted in centuries of tradition",
+ "Refined through discipline",
+ "Delivered with intention",
+ "Guided by artisanal mastery",
 ];
 
 const goodLists = [
- "Handpicked ingredients",
- "Signature techniques",
- "Bartending artistry in action",
- "Freshly muddled flavors",
+ "Purposeful craftsmanship",
+ "Time-honoured methods",
+ "Disciplined execution",
+ "Artisanal attention to detail",
 ];
 
 const storeInfo = {
@@ -110,10 +106,10 @@ const storeInfo = {
 };
 
 const openingHours = [
- { day: "Mon–Thu", time: "11:00am – 12am" },
- { day: "Fri", time: "11:00am – 2am" },
- { day: "Sat", time: "9:00am – 2am" },
- { day: "Sun", time: "9:00am – 1am" },
+ { day: "Monâ€“Thu", time: "11:00am â€“ 12am" },
+ { day: "Fri", time: "11:00am â€“ 2am" },
+ { day: "Sat", time: "9:00am â€“ 2am" },
+ { day: "Sun", time: "9:00am â€“ 1am" },
 ];
 
 const socials = [
@@ -149,7 +145,7 @@ const allCocktails = [
 	image: "/images/drink2.png",
 	title: "A Zesty Classic That Never Fails",
 	description:
-	 "The Margarita is a classic that balances tangy lime, smooth tequila, and a touch of sweetness. Shaken, frozen, or on the rocks—it’s always crisp & refreshing.",
+	 "The Margarita is a classic that balances tangy lime, smooth tequila, and a touch of sweetness. Shaken, frozen, or on the rocksâ€”itâ€™s always crisp & refreshing.",
  },
  {
 	id: 3,
@@ -169,6 +165,73 @@ const allCocktails = [
  },
 ];
 
+const menuItems = [
+ {
+  id: 1,
+  name: "Classic Mojito",
+  category: "Signature",
+  image: "/images/drink1.png",
+  description: "A timeless blend of fresh mint, lime, and aged rum — balanced to perfection with a whisper of cane sugar.",
+  price: "$14",
+ },
+ {
+  id: 2,
+  name: "Raspberry Mojito",
+  category: "Seasonal",
+  image: "/images/drink2.png",
+  description: "Sun-ripened raspberries muddled with mint and rum, finished with a sparkling lift of soda.",
+  price: "$16",
+ },
+ {
+  id: 3,
+  name: "Violet Breeze",
+  category: "Artisanal",
+  image: "/images/drink3.png",
+  description: "A serene pour of violet liqueur, elderflower, and citrus — crafted for those who seek the extraordinary.",
+  price: "$18",
+ },
+ {
+  id: 4,
+  name: "Curacao Mojito",
+  category: "Signature",
+  image: "/images/drink4.png",
+  description: "Bold blue curacao meets zesty lime and fresh mint — a mojito reimagined with Caribbean soul.",
+  price: "$16",
+ },
+ {
+  id: 5,
+  name: "Tropical Bloom",
+  category: "Seasonal",
+  image: "/images/drink1.png",
+  description: "Passionfruit, mango, and coconut water — a non-alcoholic ritual for the disciplined palate.",
+  price: "$12",
+ },
+ {
+  id: 6,
+  name: "Passionfruit Mint",
+  category: "Artisanal",
+  image: "/images/drink2.png",
+  description: "Fresh passionfruit pressed with garden mint and a touch of agave — restrained, balanced, refined.",
+  price: "$13",
+ },
+ {
+  id: 7,
+  name: "Citrus Glow",
+  category: "Mocktail",
+  image: "/images/drink3.png",
+  description: "Cold-pressed orange, yuzu, and ginger unite in a luminous blend that awakens the senses.",
+  price: "$11",
+ },
+ {
+  id: 8,
+  name: "Lavender Fizz",
+  category: "Mocktail",
+  image: "/images/drink4.png",
+  description: "Provençal lavender syrup, lemon, and sparkling water — poured with monastic calm.",
+  price: "$11",
+ },
+];
+
 export {
  navLinks,
  cocktailLists,
@@ -180,4 +243,5 @@ export {
  storeInfo,
  socials,
  allCocktails,
+ menuItems,
 };

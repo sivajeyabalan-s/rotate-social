@@ -1,4 +1,4 @@
-import { openingHours, socials } from '../../constants/index.js'
+﻿import { openingHours, socials } from '../../constants/index.js'
 import { useGSAP } from '@gsap/react'
 import { SplitText} from 'gsap/all';
 import gsap from 'gsap';
@@ -38,14 +38,14 @@ const Contact = () => {
 		<h2>Where to Find Us</h2>
 		
 		<div>
-		 <h3>Visit Our Bar</h3>
+		 <h3>Visit Us</h3>
 		 <p>456, Raq Blvd. #404, Los Angeles, CA 90210</p>
 		</div>
 		
 		<div>
 		 <h3>Contact Us</h3>
 		 <p>(555) 987-6543</p>
-		 <p>hello@jsmcocktail.com</p>
+		 <p>hello@themonks.com</p>
 		</div>
 		
 		<div>
@@ -75,7 +75,8 @@ const Contact = () => {
 		 </div>
 		</div>
 	 </div>
-	</footer>
+	  <p className="text-sm opacity-50 pb-6">&copy; 2024 The Monks. All rights reserved.</p>
+</footer>
  )
 }
 

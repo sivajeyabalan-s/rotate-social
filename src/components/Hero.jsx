@@ -1,4 +1,4 @@
-import { useGSAP } from "@gsap/react";
+﻿import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import { useRef } from "react";
@@ -91,19 +91,18 @@ const Hero = () => {
 		 
 		 <div className="content">
 			<div className="space-y-5 hidden md:block">
-			 <p>Cool. Crisp. Classic.</p>
+			 <p>Crafted. Disciplined. Purposeful.</p>
 			 <p className="subtitle">
-				Sip the Spirit <br /> of Summer
+				Guided by <br /> Tradition
 			 </p>
 			</div>
 			
 			<div className="view-cocktails">
 			 <p className="subtitle">
-				Every cocktail on our menu is a blend of premium ingredients,
-				creative flair, and timeless recipes — designed to delight your
-				senses.
+				Everything we do is a blend of intention, discipline, and
+				timeless craft u{2014} designed to elevate every experience.
 			 </p>
-			 <a href="#cocktails">View cocktails</a>
+			 <a href="#services">Explore Our Services</a>
 			</div>
 		 </div>
 		</div>

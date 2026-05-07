@@ -1,4 +1,4 @@
-import gsap from 'gsap';
+﻿import gsap from 'gsap';
 import { useMediaQuery } from 'react-responsive'
 import { useGSAP } from '@gsap/react'
 import { featureLists, goodLists } from '../../constants/index.js'
@@ -11,7 +11,7 @@ const Art = () => {
 	
 	const maskTimeline = gsap.timeline({
 	 scrollTrigger: {
-		trigger: '#art',
+		trigger: '#services',
 		start,
 		end: 'bottom center',
 		scrub: 1.5,
@@ -26,9 +26,9 @@ const Art = () => {
  })
  
  return (
-	<div id="art">
+	<div id="services">
 	 <div className="container mx-auto h-full pt-20">
-		<h2 className="will-fade">The ART</h2>
+		<h2 className="will-fade">Our Services</h2>
 		
 		<div className="content">
 		 <ul className="space-y-4 will-fade">
@@ -59,10 +59,10 @@ const Art = () => {
 		</div>
 		
 		<div className="masked-container">
-		 <h2 className="will-fade">Sip-Worthy Perfection</h2>
+		 <h2 className="will-fade">Disciplined Excellence</h2>
 		 <div id="masked-content">
-			<h3>Made with Craft, Poured with Passion</h3>
-			<p>This isn’t just a drink. It’s a carefully crafted moment made just for you.</p>
+			<h3>Guided by Tradition, Crafted with Purpose</h3>
+			<p>This isnâ€™t just a drink. Itâ€™s a carefully crafted moment made just for you.</p>
 		 </div>
 		</div>
 	 </div>

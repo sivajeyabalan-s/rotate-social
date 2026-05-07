@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 
 @import "tailwindcss";
 
@@ -136,7 +136,7 @@ body {
         @apply w-full md:h-[80%] h-1/2 absolute bottom-0 left-0 md:object-contain object-bottom object-cover;
     }
 
-    #cocktails {
+    #home {
         @apply relative min-h-dvh w-full overflow-hidden;
 
         #c-left-leaf {
@@ -240,7 +240,7 @@ body {
         }
     }
 
-    #art {
+    #services {
         @apply flex-center flex-col min-h-dvh p-5 mt-20 relative radial-gradient;
 
         h2 {
@@ -372,5 +372,123 @@ body {
         .drink-img {
             @apply absolute bottom-0 right-0 lg:w-96 w-1/3 pointer-events-none;
         }
+    }
+
+    /* ── View Full Menu button (inside #menu section) ── */
+    .view-menu-btn {
+        @apply inline-flex items-center gap-3 border border-yellow/40 text-yellow font-modern-negra
+               text-lg px-8 py-3 rounded-full tracking-wide cursor-pointer
+               hover:bg-yellow hover:text-black transition-colors duration-300;
+    }
+
+    /* ── Menu Page ── */
+    .menu-page {
+        @apply relative min-h-screen w-full bg-black text-white overflow-x-hidden pb-24;
+    }
+
+    .menu-page-header {
+        @apply sticky top-0 z-50 flex items-center justify-between
+               px-6 py-4 backdrop-blur-md bg-black/60 border-b border-white/10;
+    }
+
+    .menu-back-btn {
+        @apply flex items-center gap-2 text-sm opacity-60 hover:opacity-100
+               transition-opacity cursor-pointer;
+    }
+
+    .menu-page-hero {
+        @apply flex flex-col items-center text-center pt-32 pb-6 px-5;
+    }
+
+    .menu-page-eyebrow {
+        @apply text-sm tracking-widest uppercase text-yellow/70 mb-4 font-sans;
+    }
+
+    .menu-page-title {
+        @apply text-[20vw] md:text-[15vw] leading-none text-center;
+    }
+
+    .menu-filters {
+        @apply flex flex-wrap justify-center gap-3 px-5 pt-6 pb-10;
+    }
+
+    .menu-filter-btn {
+        @apply px-5 py-2 rounded-full border border-white/20 text-sm text-white/60
+               cursor-pointer transition-all duration-200
+               hover:border-yellow/60 hover:text-yellow;
+    }
+
+    .menu-filter-btn--active {
+        @apply border-yellow text-yellow bg-yellow/10;
+    }
+
+    .menu-grid {
+        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+               gap-6 px-5 md:px-10 container mx-auto;
+    }
+
+    /* ── Menu Card ── */
+    .menu-card {
+        @apply relative flex flex-col rounded-3xl overflow-hidden
+               border border-white/10 bg-white/[0.03] cursor-default
+               will-change-transform;
+        box-shadow: 0 0 0 0 transparent;
+        transition: box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .menu-card:hover {
+        border-color: theme('colors.yellow / 40%');
+        box-shadow: 0 8px 48px -8px theme('colors.yellow / 18%');
+    }
+
+    .menu-card-img {
+        @apply relative h-60 overflow-hidden bg-gradient-to-b from-white/5 to-black/60;
+    }
+
+    .menu-card-img img {
+        @apply w-full h-full object-contain scale-90 transition-transform duration-500;
+    }
+
+    .menu-card:hover .menu-card-img img {
+        @apply scale-100;
+    }
+
+    .menu-card-img-overlay {
+        @apply absolute inset-0;
+        background: linear-gradient(to bottom, transparent 40%, #000 100%);
+    }
+
+    .menu-card-badge {
+        @apply absolute top-3 right-3 text-[10px] uppercase tracking-widest
+               font-semibold px-3 py-1 rounded-full
+               bg-yellow/10 text-yellow border border-yellow/30;
+    }
+
+    .menu-card-body {
+        @apply flex flex-col gap-3 px-5 pb-6 pt-4;
+    }
+
+    .menu-card-name {
+        @apply font-modern-negra text-xl text-white leading-tight;
+    }
+
+    .menu-card-price {
+        @apply font-modern-negra text-yellow text-lg shrink-0;
+    }
+
+    .menu-card-desc {
+        @apply text-white/50 text-sm leading-relaxed;
+    }
+
+    .menu-card-divider {
+        @apply h-px w-full bg-white/10 my-1;
+    }
+
+    .menu-card-craft {
+        @apply text-[11px] uppercase tracking-widest text-white/25 font-sans;
+    }
+
+    .menu-page-footer-note {
+        @apply text-center text-white/30 text-xs mt-16 px-5;
     }
 }

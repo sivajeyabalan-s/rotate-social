@@ -1,8 +1,9 @@
-'use client';
+﻿'use client';
 
 import { allCocktails } from '../../constants/index.js'
 import { useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react'
+import { Link } from 'react-router-dom'
 import gsap from 'gsap';
 
 const Menu = () => {
@@ -93,6 +94,13 @@ const Menu = () => {
 		 </div>
 		</div>
 	 </div>
+
+		<div className="flex-center mt-16 relative z-10">
+		 <Link to="/menu" className="view-menu-btn">
+			<span>View Full Menu</span>
+			<img src="/images/right-arrow.png" alt="" aria-hidden="true" className="w-4 h-4 opacity-80" />
+		 </Link>
+		</div>
 	</section>
  )
 }
