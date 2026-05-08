@@ -9,7 +9,6 @@ import gsap from 'gsap';
 
 const Menu = () => {
  const contentRef = useRef();
- const tabsRef = useRef(null);
  const categories = [...new Set(menuItems.map((item) => item.category))];
  const [activeCategory, setActiveCategory] = useState(categories[0] || '');
  const [currentItemIndex, setCurrentItemIndex] = useState(0);
@@ -44,13 +43,6 @@ const Menu = () => {
  const prevItem = getItemAt(-1);
  const nextItem = getItemAt(1);
 
- const scrollTabs = (direction) => {
-	const el = tabsRef.current;
-	if (!el) return;
-	const amount = Math.max(220, el.clientWidth * 0.7);
-	el.scrollBy({ left: direction * amount, behavior: 'smooth' });
- }
- 
  return (
 	<section id="menu" aria-labelledby="menu-heading">
 	 <img src="/images/slider-left-leaf.png" alt="left-leaf" id="m-left-leaf" />
@@ -61,9 +53,7 @@ const Menu = () => {
 	 </h2>
 	 
 	 <div className="category-tabs-wrap">
-		
-
-		<nav ref={tabsRef} className="cocktail-tabs" aria-label="Menu Category Navigation">
+		<div className="cocktail-tabs" role="tablist" aria-label="Menu Category Navigation">
 		 {categories.map((category) => {
 			const isActive = category === activeCategory;
 			
@@ -71,6 +61,8 @@ const Menu = () => {
 			 <button
 			  key={category}
 			  className={`category-tab ${isActive ? 'category-tab--active' : ''}`}
+			  role="tab"
+			  aria-selected={isActive}
 			  onClick={() => {
 				 setActiveCategory(category);
 				 setCurrentItemIndex(0);
@@ -80,9 +72,7 @@ const Menu = () => {
 			 </button>
 			)
 		 })}
-		</nav>
-
-		
+		</div>
 	 </div>
 	 
 	 <div className="content">

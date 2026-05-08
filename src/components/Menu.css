@@ -16,47 +16,43 @@
         }
 
         .category-tabs-wrap {
-            @apply grid items-center gap-3 sm:gap-4 sm:mb-32 mb-20 relative z-30 md:max-w-6xl md:mx-auto w-full rounded-full border border-white/10 bg-black/55 px-3 py-3 backdrop-blur-md;
-            grid-template-columns: auto minmax(0, 1fr) auto;
-            box-shadow: 0 18px 70px rgb(0 0 0 / 45%);
+            @apply sticky top-32 z-40 w-full md:max-w-6xl md:mx-auto mb-20 sm:mb-24;
+            display: block;
+            min-height: 64px;
         }
 
         .cocktail-tabs {
-            @apply flex items-center gap-4 md:gap-8 overflow-x-auto overflow-y-hidden min-w-0 w-full whitespace-nowrap;
+            @apply flex items-center justify-start md:justify-center gap-4 md:gap-8 w-full overflow-x-auto overflow-y-hidden whitespace-nowrap py-2;
+            position: relative;
             scrollbar-width: none;
             -webkit-overflow-scrolling: touch;
-            scroll-behavior: smooth;
-
-            .category-tab {
-                @apply md:text-3xl text-xl px-4 py-2 rounded-full cursor-pointer border border-white/20 transition-all font-modern-negra shrink-0 min-w-[150px] md:min-w-[210px] text-center;
-                color: rgb(255 255 255 / 72%);
-                background: rgb(255 255 255 / 4%);
-            }
-
-            .category-tab:hover {
-                color: rgb(231 211 147);
-                border-color: rgb(231 211 147 / 65%);
-                background: rgb(231 211 147 / 10%);
-            }
-
-            .category-tab--active {
-                color: white;
-                border-color: rgb(231 211 147);
-                background: rgb(231 211 147 / 18%);
-                box-shadow: inset 0 0 0 1px rgb(255 255 255 / 8%);
-            }
-
-            &::-webkit-scrollbar {
-                display: none;
-            }
         }
 
-        .tab-scroll-btn {
-            @apply flex-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/30 text-white/90 hover:text-yellow-500 hover:border-yellow-500 transition-colors shrink-0;
+        .cocktail-tabs::-webkit-scrollbar {
+            display: none;
+        }
 
-            img {
-                @apply w-4 h-4 md:w-5 md:h-5 object-contain;
-            }
+        .category-tab {
+            @apply md:text-3xl text-xl px-5 py-2 rounded-full cursor-pointer border transition-all font-modern-negra shrink-0 min-w-[145px] md:min-w-[190px] text-center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(255 255 255 / 92%);
+            border-color: rgb(255 255 255 / 38%);
+            background: rgb(0 0 0 / 35%);
+        }
+
+        .category-tab:hover {
+            color: rgb(231 211 147);
+            border-color: rgb(231 211 147 / 70%);
+            background: rgb(231 211 147 / 10%);
+        }
+
+        .category-tab--active {
+            color: white;
+            border-color: rgb(231 211 147);
+            background: rgb(231 211 147 / 18%);
+            box-shadow: inset 0 0 0 1px rgb(255 255 255 / 8%);
         }
 
         .content {
