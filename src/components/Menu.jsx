@@ -1,7 +1,7 @@
 ﻿'use client';
 
 import './Menu.css';
-import { allCocktails } from '../../constants/index.js'
+import { menuItems } from '../../constants/index.js'
 import { useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react'
 import { Link } from 'react-router-dom'
@@ -9,7 +9,12 @@ import gsap from 'gsap';
 
 const Menu = () => {
  const contentRef = useRef();
- const [currentIndex, setCurrentIndex] = useState(0);
+ const tabsRef = useRef(null);
+ const categories = [...new Set(menuItems.map((item) => item.category))];
+ const [activeCategory, setActiveCategory] = useState(categories[0] || '');
+ const [currentItemIndex, setCurrentItemIndex] = useState(0);
+ const activeItems = menuItems.filter((item) => item.category === activeCategory);
+ const totalItems = activeItems.length;
  
  useGSAP(() => {
 	gsap.fromTo('#title', { opacity: 0 }, { opacity: 1, duration: 1 });
@@ -22,23 +27,29 @@ const Menu = () => {
 	gsap.fromTo('.details p', { yPercent: 100, opacity: 0 }, {
 	 yPercent: 0, opacity: 100, ease: 'power1.inOut'
 	})
- }, [currentIndex]);
+ }, [activeCategory, currentItemIndex]);
  
- const totalCocktails = allCocktails.length;
- 
- const goToSlide = (index) => {
-	const newIndex = (index + totalCocktails) % totalCocktails;
-	
-	setCurrentIndex(newIndex);
+ const goToSlide = (indexOffset) => {
+	if (totalItems === 0) return;
+	const newIndex = (currentItemIndex + indexOffset + totalItems) % totalItems;
+	setCurrentItemIndex(newIndex);
  }
  
- const getCocktailAt = (indexOffset) => {
-	return allCocktails[(currentIndex + indexOffset + totalCocktails) % totalCocktails]
+ const getItemAt = (indexOffset) => {
+	if (totalItems === 0) return null;
+	return activeItems[(currentItemIndex + indexOffset + totalItems) % totalItems]
  }
  
- const currentCocktail = getCocktailAt(0);
- const prevCocktail = getCocktailAt(-1);
- const nextCocktail = getCocktailAt(1);
+ const currentItem = getItemAt(0);
+ const prevItem = getItemAt(-1);
+ const nextItem = getItemAt(1);
+
+ const scrollTabs = (direction) => {
+	const el = tabsRef.current;
+	if (!el) return;
+	const amount = Math.max(220, el.clientWidth * 0.7);
+	el.scrollBy({ left: direction * amount, behavior: 'smooth' });
+ }
  
  return (
 	<section id="menu" aria-labelledby="menu-heading">
@@ -46,52 +57,60 @@ const Menu = () => {
 	 <img src="/images/slider-right-leaf.png" alt="right-leaf" id="m-right-leaf" />
 	 
 	 <h2 id="menu-heading" className="sr-only">
-		Cocktail Menu
+		Menu Categories
 	 </h2>
 	 
-	 <nav className="cocktail-tabs" aria-label="Cocktail Navigation">
-		{allCocktails.map((cocktail, index) => {
-		 const isActive = index === currentIndex;
-		 
-		 return (
-			<button key={cocktail.id} className={`
-				${isActive
-				 ? 'text-white border-white'
-				 : 'text-white/50 border-white/50'}
-			 `}	onClick={() => goToSlide(index)}
-			>
-			 {cocktail.name}
-			</button>
-		 )
-		})}
-	 </nav>
+	 <div className="category-tabs-wrap">
+		
+
+		<nav ref={tabsRef} className="cocktail-tabs" aria-label="Menu Category Navigation">
+		 {categories.map((category) => {
+			const isActive = category === activeCategory;
+			
+			return (
+			 <button
+			  key={category}
+			  className={`category-tab ${isActive ? 'category-tab--active' : ''}`}
+			  onClick={() => {
+				 setActiveCategory(category);
+				 setCurrentItemIndex(0);
+			  }}
+			 >
+			  {category}
+			 </button>
+			)
+		 })}
+		</nav>
+
+		
+	 </div>
 	 
 	 <div className="content">
 		<div className="arrows">
-		 <button className="text-left" onClick={() => goToSlide(currentIndex - 1)}>
-			<span>{prevCocktail.name}</span>
+		 <button className="text-left" onClick={() => goToSlide(-1)}>
+			<span>{prevItem?.name || activeCategory}</span>
 			<img src="/images/right-arrow.png" alt="right-arrow" aria-hidden="true" />
 		 </button>
 		 
-		 <button className="text-left" onClick={() => goToSlide(currentIndex + 1)}>
-			<span>{nextCocktail.name}</span>
+		 <button className="text-left" onClick={() => goToSlide(1)}>
+			<span>{nextItem?.name || activeCategory}</span>
 			<img src="/images/left-arrow.png" alt="left-arrow" aria-hidden="true" />
 		 </button>
 		</div>
 		
 		<div className="cocktail">
-		 <img src={currentCocktail.image} className="object-contain"/>
+		 <img src={currentItem?.image || '/images/drinks/drink1.png'} className="object-contain"/>
 		</div>
 		
 		<div className="recipe">
 		 <div ref={contentRef} className="info">
-			<p>Recipe for:</p>
-			<p id="title">{currentCocktail.name}</p>
+			<p>Selected item:</p>
+			<p id="title">{currentItem?.name || activeCategory}</p>
 		 </div>
 		 
 		 <div className="details">
-			<h2>{currentCocktail.title}</h2>
-			<p>{currentCocktail.description}</p>
+			<h2>{currentItem?.name || activeCategory || 'Our Menu'}</h2>
+			<p>{currentItem?.description || 'Explore this category to discover our offerings.'}</p>
 		 </div>
 		</div>
 	 </div>
