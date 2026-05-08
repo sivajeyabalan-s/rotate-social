@@ -10,20 +10,10 @@
         @apply flex flex-col items-center gap-5 py-5 px-5 container mx-auto;
     }
 
-    @screen md {
-        nav div {
-            @apply flex-row justify-between;
-        }
-    }
-
     @screen lg {
         nav div {
             @apply px-0;
         }
-    }
-
-    nav p {
-        @apply font-modern-negra text-3xl -mb-2;
     }
 
     nav a {
@@ -38,6 +28,10 @@
 
     nav ul {
         @apply flex-center gap-7;
+    }
+
+    nav img {
+        @apply w-36 md:w-44 h-auto shrink-0;
     }
 
     @screen lg {

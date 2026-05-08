@@ -8,7 +8,6 @@ import Navbar from '../components/Navbar.jsx';
 
 const CATEGORIES = [
   'All',
-  'Drinks',
   'Appetizers',
   'Kebabs',
   'Mains',
@@ -17,6 +16,7 @@ const CATEGORIES = [
   'Breads',
   'Salads',
   'Desserts',
+  'Drinks',
 ];
 
 const MenuCard = ({ item, index }) => {

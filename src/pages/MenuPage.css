@@ -17,12 +17,12 @@
     }
 
     .menu-page-title {
-        @apply text-[20vw] leading-none text-center;
+        @apply text-[5vw] leading-none text-center;
     }
 
     @screen md {
         .menu-page-title {
-            @apply text-[15vw];
+            @apply text-[5vw];
         }
     }
 
