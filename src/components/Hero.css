@@ -6,7 +6,7 @@
         @apply relative z-10 min-h-dvh w-full border border-transparent;
 
         h1 {
-            @apply md:mt-32 mt-40 mx-auto w-full max-w-[96vw] px-4 text-center font-modern-negra leading-[0.95] text-[clamp(3rem,13vw,12rem)];
+            @apply md:mt-52 mt-48 mx-auto w-full max-w-[96vw] px-4 text-center font-modern-negra leading-[0.95] text-[clamp(3rem,13vw,12rem)];
         }
 
         .left-leaf {
@@ -20,7 +20,7 @@
         }
 
         .body {
-            @apply container mx-auto absolute left-1/2 -translate-x-1/2 lg:bottom-20 top-auto md:top-[30vh] flex justify-between items-end px-5;
+            @apply container mx-auto absolute left-1/2 -translate-x-1/2 lg:bottom-20 top-auto md:top-[38vh] flex justify-between items-end px-5;
 
             .content {
                 @apply flex lg:flex-row flex-col w-full gap-10 justify-between items-center lg:items-end mx-auto;
