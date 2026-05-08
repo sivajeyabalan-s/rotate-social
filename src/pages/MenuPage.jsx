@@ -6,7 +6,18 @@ import { SplitText } from 'gsap/all';
 import { menuItems } from '../../constants/index.js';
 import Navbar from '../components/Navbar.jsx';
 
-const CATEGORIES = ['All', 'Signature', 'Seasonal', 'Artisanal', 'Mocktail'];
+const CATEGORIES = [
+  'All',
+  'Drinks',
+  'Appetizers',
+  'Kebabs',
+  'Mains',
+  'Curries',
+  'Rice',
+  'Breads',
+  'Salads',
+  'Desserts',
+];
 
 const MenuCard = ({ item, index }) => {
   const cardRef = useRef();
@@ -63,7 +74,7 @@ const MenuCard = ({ item, index }) => {
       <div className="menu-card-body">
         <div className="flex justify-between items-start gap-2">
           <h3 className="menu-card-name">{item.name}</h3>
-          <span className="menu-card-price">{item.price}</span>
+          {item.price ? <span className="menu-card-price">{item.price}</span> : null}
         </div>
         <p className="menu-card-desc">{item.description}</p>
         <div className="menu-card-divider" />
@@ -81,6 +92,13 @@ const MenuPage = () => {
   const filtered = activeCategory === 'All'
     ? menuItems
     : menuItems.filter((item) => item.category === activeCategory);
+  const categoryOrder = CATEGORIES.filter((cat) => cat !== 'All');
+  const groupedForAll = categoryOrder
+    .map((cat) => ({
+      category: cat,
+      items: menuItems.filter((item) => item.category === cat),
+    }))
+    .filter((group) => group.items.length > 0);
 
   useGSAP(() => {
     const split = SplitText.create(headingRef.current, { type: 'chars' });
@@ -94,14 +112,6 @@ const MenuPage = () => {
       stagger: 0.04,
     });
 
-    gsap.from(filterRef.current.children, {
-      opacity: 0,
-      y: 20,
-      duration: 0.6,
-      ease: 'power2.out',
-      stagger: 0.08,
-      delay: 0.6,
-    });
   }, []);
 
   return (
@@ -133,11 +143,28 @@ const MenuPage = () => {
       </div>
 
       {/* Cards */}
-      <div className="menu-grid">
-        {filtered.map((item, i) => (
-          <MenuCard key={item.id} item={item} index={i} />
-        ))}
-      </div>
+      {activeCategory === 'All' ? (
+        <div className="space-y-14">
+          {groupedForAll.map((group) => (
+            <section key={group.category}>
+              <h2 className="text-3xl md:text-4xl font-modern-negra text-white mb-6 ml-3 md:ml-6">
+                {group.category}
+              </h2>
+              <div className="menu-grid">
+                {group.items.map((item, i) => (
+                  <MenuCard key={item.id} item={item} index={i} />
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+      ) : (
+        <div className="menu-grid">
+          {filtered.map((item, i) => (
+            <MenuCard key={item.id} item={item} index={i} />
+          ))}
+        </div>
+      )}
 
       <p className="menu-page-footer-note">
         All items are prepared fresh daily — availability may vary.

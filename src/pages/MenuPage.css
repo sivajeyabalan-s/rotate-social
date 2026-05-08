@@ -27,13 +27,23 @@
     }
 
     .menu-filters {
-        @apply flex flex-wrap justify-center gap-3 px-5 pt-6 pb-10;
+        @apply sticky top-16 z-50 flex flex-nowrap md:flex-wrap md:justify-center gap-3 px-5 py-4 mb-8 border-y border-white/10 bg-black/95 backdrop-blur-sm overflow-x-auto md:overflow-visible;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-filters::-webkit-scrollbar {
+        display: none;
     }
 
     .menu-filter-btn {
-        @apply px-5 py-2 rounded-full border border-white/20 text-sm text-white/60
+        @apply shrink-0 px-5 py-2 rounded-full border border-white/40 text-sm text-white/90
                cursor-pointer transition-all duration-200
                hover:border-yellow-500/60 hover:text-yellow-500;
+        opacity: 1;
+        visibility: visible;
     }
 
     .menu-filter-btn--active {
@@ -71,7 +81,7 @@
     }
 
     .menu-card-img img {
-        @apply w-full h-full object-contain scale-90 transition-transform duration-500;
+        @apply w-full h-full object-cover scale-90 transition-transform duration-500;
     }
 
     .menu-card:hover .menu-card-img img {

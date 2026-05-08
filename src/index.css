@@ -60,7 +60,7 @@ body {
         @apply w-full overflow-x-hidden;
     }
 
-    .noisy {
-        @apply absolute inset-0 size-full bg-[url("/images/noise.png")];
-    }
+    /* .noisy {
+        @apply absolute inset-0 size-full bg-[url("/images/noises.png")];
+    } */
 }
