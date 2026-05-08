@@ -6,11 +6,13 @@
         @apply relative w-full md:mt-40 mt-0 2xl:px-0 px-5 py-20 radial-gradient;
 
         #m-left-leaf {
-            @apply object-contain absolute -bottom-20 left-0 md:w-fit w-1/3;
+            @apply object-contain absolute -bottom-20 left-0 w-[80px] h-[80px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px];
         }
 
         #m-right-leaf {
-            @apply object-contain absolute -top-40 right-0 md:w-fit w-1/4;
+            @apply object-contain absolute w-[80px] h-[80px] md:w-[200px] md:h-[200px] lg:w-[300px] lg:h-[300px];
+            top: clamp(-160px, -10vw, -40px);
+            right: clamp(-48px, -4vw, -12px);
         }
 
         .cocktail-tabs {
