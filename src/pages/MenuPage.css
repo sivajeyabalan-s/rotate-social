@@ -9,7 +9,7 @@
     }
 
     .menu-page-hero {
-        @apply flex flex-col items-center text-center pt-32 pb-6 px-5;
+        @apply flex flex-col items-center text-center pt-52 md:pt-56 pb-8 px-5;
     }
 
     .menu-page-eyebrow {
@@ -27,7 +27,7 @@
     }
 
     .menu-filters {
-        @apply sticky top-16 z-50 flex flex-nowrap md:flex-wrap md:justify-center gap-3 px-5 py-4 mb-8 border-y border-white/10 bg-black/95 backdrop-blur-sm overflow-x-auto md:overflow-visible;
+        @apply sticky top-36 z-40 flex flex-nowrap md:flex-wrap md:justify-center gap-3 px-5 py-4 mb-8 border-y border-white/10 bg-black/95 backdrop-blur-sm overflow-x-auto md:overflow-visible;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         opacity: 1;
