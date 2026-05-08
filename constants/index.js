@@ -134,7 +134,7 @@ const allCocktails = [
   {
     id: 1,
     name: "Classic Rotate Social",
-    image: "/images/drinks/drink1.png",
+    image: "/images/drinks/drink14.png",
     title: "Simple Ingredients, Bold Flavor",
     description:
       "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
@@ -170,7 +170,7 @@ const menuItems = [
     id: 1,
     name: "Classic Rotate Social",
     category: "Drinks",
-    image: "/images/drinks/drink1.jpg",
+    image: "/images/drinks/drink1.png",
     description:
       "A timeless blend of fresh mint, lime, and aged rum — balanced to perfection with a whisper of cane sugar.",
     
@@ -179,7 +179,7 @@ const menuItems = [
     id: 2,
     name: "Raspberry Rotate Social",
     category: "Drinks",
-    image: "/images/drinks/drink2.jpg",
+    image: "/images/drinks/drink2 (2).png",
     description:
       "Sun-ripened raspberries muddled with mint and rum, finished with a sparkling lift of soda.",
     
@@ -188,7 +188,7 @@ const menuItems = [
     id: 3,
     name: "Violet Breeze",
     category: "Drinks",
-    image: "/images/drinks/drink3.jpg",
+    image: "/images/drinks/drink3.png",
     description:
       "A serene pour of violet liqueur, elderflower, and citrus — crafted for those who seek the extraordinary.",
     
@@ -197,7 +197,7 @@ const menuItems = [
     id: 4,
     name: "Curacao Rotate Social",
     category: "Drinks",
-    image: "/images/drinks/drink4.jpg",
+    image: "/images/drinks/drink4.png",
     description:
       "Bold blue curacao meets zesty lime and fresh mint — a Rotate Social reimagined with Caribbean soul.",
     
@@ -206,7 +206,7 @@ const menuItems = [
     id: 5,
     name: "Tropical Bloom",
     category: "Drinks",
-    image: "/images/drinks/drink5.jpg",
+    image: "/images/drinks/drink5.png",
     description:
       "Passionfruit, mango, and coconut water — a non-alcoholic ritual for the disciplined palate.",
     
@@ -215,7 +215,7 @@ const menuItems = [
     id: 6,
     name: "Passionfruit Mint",
     category: "Drinks",
-    image: "/images/drinks/drink6.jpg",
+    image: "/images/drinks/drink6.png",
     description:
       "Fresh passionfruit pressed with garden mint and a touch of agave — restrained, balanced, refined.",
     
@@ -224,7 +224,7 @@ const menuItems = [
     id: 7,
     name: "Citrus Glow",
     category: "Drinks",
-    image: "/images/drinks/drink7.jpg",
+    image: "/images/drinks/drink7.png",
     description:
       "Cold-pressed orange, yuzu, and ginger unite in a luminous blend that awakens the senses.",
     
@@ -233,7 +233,7 @@ const menuItems = [
     id: 8,
     name: "Lavender Fizz",
     category: "Drinks",
-    image: "/images/drinks/drink8.jpg",
+    image: "/images/drinks/drink8.png",
     description:
       "Provençal lavender syrup, lemon, and sparkling water — poured with monastic calm.",
     
@@ -242,7 +242,7 @@ const menuItems = [
     id: 9,
     name: "Citrus Ember",
     category: "Drinks",
-    image: "/images/drinks/drink9.jpg",
+    image: "/images/drinks/drink9.png",
     description:
       "A bright citrus profile layered with botanical depth and a slow, warming finish.",
     
@@ -251,7 +251,7 @@ const menuItems = [
     id: 10,
     name: "Monk's Reserve",
     category: "Drinks",
-    image: "/images/drinks/drink10.jpg",
+    image: "/images/drinks/drink10.png",
     description:
       "Small-batch spirit, herbal infusion, and subtle smoke — deliberate and composed.",
     
@@ -260,7 +260,7 @@ const menuItems = [
     id: 11,
     name: "Golden Orchard",
     category: "Drinks",
-    image: "/images/drinks/drink11.jpg",
+    image: "/images/drinks/drink11.png",
     description:
       "Pressed orchard fruit, spice, and a crisp finish inspired by late harvest evenings.",
     
@@ -269,7 +269,7 @@ const menuItems = [
     id: 12,
     name: "Nocturne Tonic",
     category: "Drinks",
-    image: "/images/drinks/drink12.jpg",
+    image: "/images/drinks/drink12.png",
     description:
       "Dark berries, tonic lift, and restrained bitterness built for a clean nightcap.",
     
@@ -278,7 +278,7 @@ const menuItems = [
     id: 13,
     name: "Saffron Mist",
     category: "Drinks",
-    image: "/images/drinks/drink13.jpg",
+    image: "/images/drinks/drink13.png",
     description:
       "Florals and saffron threads balanced with citrus oils for a refined aromatic pour.",
    
@@ -287,7 +287,7 @@ const menuItems = [
     id: 14,
     name: "Minted Grove",
     category: "Drinks",
-    image: "/images/drinks/drink14.jpg",
+    image: "/images/drinks/drink14.png",
     description:
       "Fresh mint, cucumber, and lime topped with sparkling water for a cooling ritual.",
     
@@ -296,7 +296,7 @@ const menuItems = [
     id: 15,
     name: "Ruby Fizz",
     category: "Drinks",
-    image: "/images/drinks/drink15.jpg",
+    image: "/images/drinks/drink15.png",
     description:
       "Pomegranate, citrus, and gentle effervescence for a vivid, alcohol-free finish.",
     
