@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import './Menu.css';
 import { allCocktails } from '../../constants/index.js'
 import { useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react'

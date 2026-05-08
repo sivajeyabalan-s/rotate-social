@@ -1,4 +1,5 @@
-﻿import { useGSAP } from '@gsap/react'
+﻿import './Cocktails.css';
+import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
 import { cocktailLists, mockTailLists } from '../../constants/index.js'
 

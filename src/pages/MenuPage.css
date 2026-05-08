@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@import "../tailwind-utils.css";
+
+@layer components {
+    .menu-page {
+        @apply relative min-h-screen w-full overflow-x-hidden pb-24;
+        background-color: black;
+        color: white;
+    }
+
+    .menu-page-hero {
+        @apply flex flex-col items-center text-center pt-32 pb-6 px-5;
+    }
+
+    .menu-page-eyebrow {
+        @apply text-sm tracking-widest uppercase text-yellow-500/70 mb-4 font-sans;
+    }
+
+    .menu-page-title {
+        @apply text-[20vw] leading-none text-center;
+    }
+
+    @screen md {
+        .menu-page-title {
+            @apply text-[15vw];
+        }
+    }
+
+    .menu-filters {
+        @apply flex flex-wrap justify-center gap-3 px-5 pt-6 pb-10;
+    }
+
+    .menu-filter-btn {
+        @apply px-5 py-2 rounded-full border border-white/20 text-sm text-white/60
+               cursor-pointer transition-all duration-200
+               hover:border-yellow-500/60 hover:text-yellow-500;
+    }
+
+    .menu-filter-btn--active {
+        @apply border-yellow-500 text-yellow-500 bg-yellow-500/10;
+    }
+
+    .menu-grid {
+        @apply grid gap-6 px-5 container mx-auto justify-center;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 320px));
+    }
+
+    @screen md {
+        .menu-grid {
+            @apply px-10;
+        }
+    }
+
+    .menu-card {
+        @apply relative flex flex-col rounded-3xl overflow-hidden
+               border border-white/10 bg-white/[0.03] cursor-default
+               will-change-transform;
+        width: 100%;
+        max-width: 320px;
+        box-shadow: 0 0 0 0 transparent;
+        transition: box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .menu-card:hover {
+        border-color: rgb(231 211 147 / 40%);
+        box-shadow: 0 8px 48px -8px rgb(231 211 147 / 18%);
+    }
+
+    .menu-card-img {
+        @apply relative h-60 overflow-hidden bg-gradient-to-b from-white/5 to-black/60;
+    }
+
+    .menu-card-img img {
+        @apply w-full h-full object-contain scale-90 transition-transform duration-500;
+    }
+
+    .menu-card:hover .menu-card-img img {
+        @apply scale-100;
+    }
+
+    .menu-card-img-overlay {
+        @apply absolute inset-0;
+        background: linear-gradient(to bottom, transparent 40%, #000 100%);
+    }
+
+    .menu-card-badge {
+        @apply absolute top-3 right-3 text-[10px] uppercase tracking-widest
+               font-semibold px-3 py-1 rounded-full
+               bg-yellow-500/10 text-yellow-500 border border-yellow-500/30;
+    }
+
+    .menu-card-body {
+        @apply flex flex-col gap-3 px-5 pb-6 pt-4;
+    }
+
+    .menu-card-name {
+        @apply font-modern-negra text-xl text-white leading-tight;
+    }
+
+    .menu-card-price {
+        @apply font-modern-negra text-yellow-500 text-lg shrink-0;
+    }
+
+    .menu-card-desc {
+        @apply text-white/50 text-sm leading-relaxed;
+    }
+
+    .menu-card-divider {
+        @apply h-px w-full bg-white/10 my-1;
+    }
+
+    .menu-card-craft {
+        @apply text-[11px] uppercase tracking-widest text-white/25 font-sans;
+    }
+
+    .menu-page-footer-note {
+        @apply text-center text-white/30 text-xs mt-16 px-5;
+    }
+}

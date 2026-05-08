@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import "../tailwind-utils.css";
+
+@layer components {
+    nav {
+        @apply fixed z-50 w-full;
+    }
+
+    nav div {
+        @apply flex flex-col items-center gap-5 py-5 px-5 container mx-auto;
+    }
+
+    @screen md {
+        nav div {
+            @apply flex-row justify-between;
+        }
+    }
+
+    @screen lg {
+        nav div {
+            @apply px-0;
+        }
+    }
+
+    nav p {
+        @apply font-modern-negra text-3xl -mb-2;
+    }
+
+    nav a {
+        @apply cursor-pointer text-nowrap text-sm;
+    }
+
+    @screen md {
+        nav a {
+            @apply text-base;
+        }
+    }
+
+    nav ul {
+        @apply flex-center gap-7;
+    }
+
+    @screen lg {
+        nav ul {
+            @apply gap-12;
+        }
+    }
+}

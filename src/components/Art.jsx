@@ -1,4 +1,5 @@
-﻿import gsap from 'gsap';
+﻿import './Art.css';
+import gsap from 'gsap';
 import { useMediaQuery } from 'react-responsive'
 import { useGSAP } from '@gsap/react'
 import { featureLists, goodLists } from '../../constants/index.js'
@@ -42,7 +43,7 @@ const Art = () => {
 		 
 		 <div className="cocktail-img">
 			<img
-				src="/images/under-img.jpg"
+				src="/images/under-img.png"
 				alt="cocktail"
 				className="abs-center masked-img size-full object-contain"
 			/>
