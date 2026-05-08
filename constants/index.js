@@ -173,7 +173,7 @@ const menuItems = [
     image: "/images/drinks/drink1.jpg",
     description:
       "A timeless blend of fresh mint, lime, and aged rum — balanced to perfection with a whisper of cane sugar.",
-    price: "$14",
+    
   },
   {
     id: 2,
@@ -182,7 +182,7 @@ const menuItems = [
     image: "/images/drinks/drink2.jpg",
     description:
       "Sun-ripened raspberries muddled with mint and rum, finished with a sparkling lift of soda.",
-    price: "$16",
+    
   },
   {
     id: 3,
@@ -191,7 +191,7 @@ const menuItems = [
     image: "/images/drinks/drink3.jpg",
     description:
       "A serene pour of violet liqueur, elderflower, and citrus — crafted for those who seek the extraordinary.",
-    price: "$18",
+    
   },
   {
     id: 4,
@@ -200,7 +200,7 @@ const menuItems = [
     image: "/images/drinks/drink4.jpg",
     description:
       "Bold blue curacao meets zesty lime and fresh mint — a Rotate Social reimagined with Caribbean soul.",
-    price: "$16",
+    
   },
   {
     id: 5,
@@ -209,7 +209,7 @@ const menuItems = [
     image: "/images/drinks/drink5.jpg",
     description:
       "Passionfruit, mango, and coconut water — a non-alcoholic ritual for the disciplined palate.",
-    price: "$12",
+    
   },
   {
     id: 6,
@@ -218,7 +218,7 @@ const menuItems = [
     image: "/images/drinks/drink6.jpg",
     description:
       "Fresh passionfruit pressed with garden mint and a touch of agave — restrained, balanced, refined.",
-    price: "$13",
+    
   },
   {
     id: 7,
@@ -227,7 +227,7 @@ const menuItems = [
     image: "/images/drinks/drink7.jpg",
     description:
       "Cold-pressed orange, yuzu, and ginger unite in a luminous blend that awakens the senses.",
-    price: "$11",
+    
   },
   {
     id: 8,
@@ -236,7 +236,7 @@ const menuItems = [
     image: "/images/drinks/drink8.jpg",
     description:
       "Provençal lavender syrup, lemon, and sparkling water — poured with monastic calm.",
-    price: "$11",
+    
   },
   {
     id: 9,
@@ -245,7 +245,7 @@ const menuItems = [
     image: "/images/drinks/drink9.jpg",
     description:
       "A bright citrus profile layered with botanical depth and a slow, warming finish.",
-    price: "$17",
+    
   },
   {
     id: 10,
@@ -254,7 +254,7 @@ const menuItems = [
     image: "/images/drinks/drink10.jpg",
     description:
       "Small-batch spirit, herbal infusion, and subtle smoke — deliberate and composed.",
-    price: "$19",
+    
   },
   {
     id: 11,
@@ -263,7 +263,7 @@ const menuItems = [
     image: "/images/drinks/drink11.jpg",
     description:
       "Pressed orchard fruit, spice, and a crisp finish inspired by late harvest evenings.",
-    price: "$16",
+    
   },
   {
     id: 12,
@@ -272,7 +272,7 @@ const menuItems = [
     image: "/images/drinks/drink12.jpg",
     description:
       "Dark berries, tonic lift, and restrained bitterness built for a clean nightcap.",
-    price: "$18",
+    
   },
   {
     id: 13,
@@ -281,7 +281,7 @@ const menuItems = [
     image: "/images/drinks/drink13.jpg",
     description:
       "Florals and saffron threads balanced with citrus oils for a refined aromatic pour.",
-    price: "$20",
+   
   },
   {
     id: 14,
@@ -290,7 +290,7 @@ const menuItems = [
     image: "/images/drinks/drink14.jpg",
     description:
       "Fresh mint, cucumber, and lime topped with sparkling water for a cooling ritual.",
-    price: "$12",
+    
   },
   {
     id: 15,
@@ -299,13 +299,13 @@ const menuItems = [
     image: "/images/drinks/drink15.jpg",
     description:
       "Pomegranate, citrus, and gentle effervescence for a vivid, alcohol-free finish.",
-    price: "$12",
+    
   },
   {
     id: 16,
     name: "Crispy Corn",
     category: "Appetizers",
-    image: "/images/drinks/drink1.jpg",
+    image: "/images/foods/crispy Corn.png",
     description: "Crisp-fried corn tossed with Indian fusion spices.",
     price: "",
   },
@@ -313,7 +313,7 @@ const menuItems = [
     id: 17,
     name: "Gobi Manchurian",
     category: "Appetizers",
-    image: "/images/drinks/drink2.jpg",
+    image: "/images/foods/Gobi manchurian.png",
     description: "Crispy cauliflower in a bold Indo-Chinese Manchurian sauce.",
     price: "",
   },
@@ -321,7 +321,7 @@ const menuItems = [
     id: 18,
     name: "Gobi Chilli",
     category: "Appetizers",
-    image: "/images/drinks/drink3.jpg",
+    image: "/images/foods/Chilli Gobi.png",
     description: "Cauliflower wok-tossed with peppers, onions, and chilli.",
     price: "",
   },
@@ -329,7 +329,7 @@ const menuItems = [
     id: 19,
     name: "Paneer Chilli",
     category: "Appetizers",
-    image: "/images/drinks/drink4.jpg",
+    image: "/images/foods/Chilli Panner.png",
     description: "Cottage cheese cubes in a spicy chilli garlic glaze.",
     price: "",
   },
@@ -337,7 +337,7 @@ const menuItems = [
     id: 20,
     name: "Sweet Chilli Popcorn Shrimp",
     category: "Appetizers",
-    image: "/images/drinks/drink5.jpg",
+    image: "/images/foods/Sweet Chilli Popcorn Shrimp.jpg",
     description: "Crispy shrimp bites finished with sweet chilli sauce.",
     price: "",
   },
@@ -345,7 +345,7 @@ const menuItems = [
     id: 21,
     name: "Bone in Wings",
     category: "Appetizers",
-    image: "/images/drinks/drink6.jpg",
+    image: "/images/foods/bone in wings.jpg",
     description: "Juicy bone-in wings tossed in house seasoning.",
     price: "",
   },
@@ -353,7 +353,7 @@ const menuItems = [
     id: 22,
     name: "Chicken Lollipop",
     category: "Appetizers",
-    image: "/images/drinks/drink7.jpg",
+    image: "/images/foods/Chicken Lollipop.png",
     description: "Crisp chicken drumettes with classic Indo-Chinese flavor.",
     price: "",
   },
@@ -361,7 +361,7 @@ const menuItems = [
     id: 23,
     name: "Shrimp Chilli",
     category: "Appetizers",
-    image: "/images/drinks/drink8.jpg",
+    image: "/images/foods/Shrimp Chilli.png",
     description: "Shrimp stir-fried with chillies, garlic, and peppers.",
     price: "",
   },
@@ -369,7 +369,7 @@ const menuItems = [
     id: 24,
     name: "Paneer Tikka Kebab",
     category: "Kebabs",
-    image: "/images/drinks/drink9.jpg",
+    image: "/images/foods/paneer tikka kebabs.jpg",
     description: "Tandoor-charred paneer tikka skewers with smoky spice.",
     price: "",
   },
@@ -377,15 +377,15 @@ const menuItems = [
     id: 25,
     name: "Malai Chicken Kebab",
     category: "Kebabs",
-    image: "/images/drinks/drink10.jpg",
+    image: "/images/foods/malai chicken kebab.png",
     description: "Creamy marinated chicken kebabs, tender and aromatic.",
     price: "",
   },
   {
     id: 26,
-    name: "Clay Tandoori Wings (5pcs)",
+    name: "Clay Tandoori Wings ( 5 pcs)",
     category: "Kebabs",
-    image: "/images/drinks/drink11.jpg",
+    image: "/images/foods/clay tandoori wings.jpg",
     description: "Five tandoor-finished wings with house clay-oven spice.",
     price: "",
   },
@@ -393,7 +393,7 @@ const menuItems = [
     id: 27,
     name: "Rotate Speciality Burger",
     category: "Mains",
-    image: "/images/drinks/drink12.jpg",
+    image: "/images/foods/Rotate Speciality Burger.jpg",
     description: "House-crafted burger with layered Indian fusion flavors.",
     price: "",
   },
@@ -401,7 +401,7 @@ const menuItems = [
     id: 28,
     name: "Plain Naan",
     category: "Breads",
-    image: "/images/drinks/drink13.jpg",
+    image: "/images/foods/plain naan.jpg",
     description: "Soft tandoor naan baked fresh to order.",
     price: "",
   },
@@ -409,7 +409,7 @@ const menuItems = [
     id: 29,
     name: "Bullet Naan",
     category: "Breads",
-    image: "/images/drinks/drink14.jpg",
+    image: "/images/foods/bullet naan.png",
     description: "Spiced naan with a fiery kick.",
     price: "",
   },
@@ -417,7 +417,7 @@ const menuItems = [
     id: 30,
     name: "Caesar Salad",
     category: "Salads",
-    image: "/images/drinks/drink15.jpg",
+    image: "/images/foods/caesar salad.jpg",
     description: "Crisp romaine, parmesan, and classic caesar dressing.",
     price: "",
   },
@@ -425,7 +425,7 @@ const menuItems = [
     id: 31,
     name: "Dal Tadka",
     category: "Curries",
-    image: "/images/drinks/drink1.jpg",
+    image: "/images/foods/dal tadka.png",
     description: "Yellow lentils tempered with cumin, garlic, and ghee.",
     price: "",
   },
@@ -433,7 +433,7 @@ const menuItems = [
     id: 32,
     name: "Chicken Mughlai",
     category: "Curries",
-    image: "/images/drinks/drink2.jpg",
+    image: "/images/foods/chicken mughlai.png",
     description: "Rich Mughlai-style chicken curry with warm spices.",
     price: "",
   },
@@ -441,7 +441,7 @@ const menuItems = [
     id: 33,
     name: "Shrimp Tikka Masala",
     category: "Curries",
-    image: "/images/drinks/drink3.jpg",
+    image: "/images/foods/shrimp tikka masala.png",
     description: "Shrimp simmered in a creamy tikka masala gravy.",
     price: "",
   },
@@ -449,7 +449,7 @@ const menuItems = [
     id: 34,
     name: "Egg Tikka Masala",
     category: "Curries",
-    image: "/images/drinks/drink4.jpg",
+    image: "/images/foods/egg tikka masala.png",
     description: "Boiled eggs in a robust tomato-onion masala.",
     price: "",
   },
@@ -457,7 +457,7 @@ const menuItems = [
     id: 35,
     name: "Momos",
     category: "Appetizers",
-    image: "/images/drinks/drink5.jpg",
+    image: "/images/foods/momos.jpg",
     description: "Steamed dumplings served with spicy chutney.",
     price: "",
   },
@@ -465,7 +465,7 @@ const menuItems = [
     id: 36,
     name: "Hyderabadi Chicken Dum Biryani",
     category: "Rice",
-    image: "/images/drinks/drink6.jpg",
+    image: "/images/foods/hyderabadi chicken dum biryani.png",
     description: "Aromatic basmati and chicken dum-cooked with saffron.",
     price: "",
   },
@@ -473,7 +473,7 @@ const menuItems = [
     id: 37,
     name: "Street Style Fried Rice",
     category: "Rice",
-    image: "/images/drinks/drink7.jpg",
+    image: "/images/foods/Street Style Fried Rice.png",
     description: "Wok-fried rice inspired by classic Indian street flavors.",
     price: "",
   },
@@ -481,7 +481,7 @@ const menuItems = [
     id: 38,
     name: "Fried Rice",
     category: "Rice",
-    image: "/images/drinks/drink8.jpg",
+    image: "/images/foods/fried rice.png",
     description: "Savory fried rice with vegetables and house seasoning.",
     price: "",
   },
@@ -489,7 +489,7 @@ const menuItems = [
     id: 39,
     name: "Gulab Jamun",
     category: "Desserts",
-    image: "/images/drinks/drink9.jpg",
+    image: "/images/foods/Gulab jamun.png",
     description: "Soft milk-solid dumplings soaked in warm sugar syrup.",
     price: "",
   },
@@ -497,7 +497,7 @@ const menuItems = [
     id: 40,
     name: "Ice Cream 3 Scoops",
     category: "Desserts",
-    image: "/images/drinks/drink10.jpg",
+    image: "/images/foods/ice cream 3 scoop.jpg",
     description: "Three scoops of ice cream to finish on a sweet note.",
     price: "",
   },

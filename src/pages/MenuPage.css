@@ -104,11 +104,11 @@
     }
 
     .menu-card-name {
-        @apply font-modern-negra text-xl text-white leading-tight;
+        @apply text-xl text-white leading-tight font-semibold;
     }
 
     .menu-card-price {
-        @apply font-modern-negra text-yellow-500 text-lg shrink-0;
+        @apply text-yellow-500 text-lg shrink-0 font-semibold;
     }
 
     .menu-card-desc {
